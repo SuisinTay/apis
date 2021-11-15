@@ -1,17 +1,15 @@
 {
-  "name": "npm-init-example",
+  "name": "init-server",
   "version": "1.0.0",
-  "description": "Example package.json",
+  "description": "rest api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "example",
-    "package.json",
-    "npm",
-    "init"
-  ],
-  "author": "Sui Sin",
-  "license": "ISC"
+  "author": "Suisin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1"
+  }
 }
