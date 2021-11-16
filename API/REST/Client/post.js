@@ -11,9 +11,9 @@ axios
 
 axios
   .post("http://localhost:8000/post-test", {
-    username: "catt",
-    password: "vaaa",
-    website: "vaaaa.com",
+    username: "rattt",
+    password: "mattt",
+    website: "cattt.com",
   })
   .then((response) => {
     console.log(response.data);

@@ -17,6 +17,18 @@ app.get("/list_users", (req, res) => {
   });
 });
 
+app.get("/search_user/:username", (req, res) => {
+  let arr_data = null;
+
+  fs.readFile(__dirname + "/" + "users.json", "utf8", (err, data) => {
+    arr_data = data;
+  });
+
+  const search_data = obj.users.find((c) => c.username === req.params.username);
+  if (!search_data) res.status(404).send("Username Not Exists");
+  res.send(search_data);
+});
+
 app.post("/post-test", (req, res) => {
   obj.users.push(req.body);
   var json = JSON.stringify(obj);
